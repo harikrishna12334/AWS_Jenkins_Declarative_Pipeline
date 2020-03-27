@@ -11,7 +11,8 @@ pipeline {
             // s3Upload acl: 'Private', bucket: 'Relicance_BK', file: 'hello.txt'
             // s3Download bucket: 'Relicance_BK', file: 'downloadedHello.txt', path: 'hello.txt'
             //bat 'cat downloadedHello.txt'
-               bat 'aws s3 mb s3://relicankb --region us-east-1'
+               // bat 'aws s3 mb s3://relicankb --region us-east-1'
+                    bat 'aws s3 rb s3://relicankb --region us-east-1'
                 
             }
             
