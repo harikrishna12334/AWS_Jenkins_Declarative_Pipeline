@@ -15,7 +15,7 @@ pipeline {
                     // bat 'aws s3 rb s3://relicankb --region us-east-1'
                     //bat 'aws s3 rb s3://reliacankb --force --region us-east-1 '
                     bat '''
-                    if aws ls "s3://$S3_BUCKET"
+                    if aws "s3://$S3_BUCKET"
                     then
                     echo "bucket exist"
                     else
