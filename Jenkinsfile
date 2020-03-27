@@ -6,22 +6,22 @@ pipeline {
                    
                 
                 withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'default_region', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
-            bat 'aws s3 mb s3://relicankb --region us-east-1'
+            // bat 'aws s3 mb s3://relicankb --region us-east-1'
                    // bat 'echo "hello KB">hello.txt'
                     // s3Upload acl: 'Private', bucket: 'Relicance_BK', file: 's3file', path: 'D:\\Krishna\\AWS\\jenkins\\workspace\\AWS_Pipeline', text: 'this is s3 file', workingDir: 'AWS_Pipeline'  
                     // s3Download bucket: 'Relicance_BK', file: 'downloadedHello.txt', path: 'hello.txt'
                     //bat 'cat downloadedHello.txt'
                // bat 'aws s3 mb s3://relicankb --region us-east-1'
-                    // bat 'aws s3 rb s3://relicankb --region us-east-1'
+                    bat 'aws s3 rb s3://relicankb --region us-east-1'
                     //bat 'aws s3 rb s3://reliacankb --force --region us-east-1 '
-                    bat '''
-                    if aws "s3://$S3_BUCKET"
-                    then
-                    echo "bucket exist"
-                    else
-                    echo "bucket not exit"
-                    fi
-                    '''
+                   
+                   // if aws "s3://$S3_BUCKET"
+                    //then
+                    //echo "bucket exist"
+                    //else
+                    //echo "bucket not exit"
+                    //fi
+                    
                     
                     
                     //  if [[ -z $(aws s3api head-bucket --bucket relicankb) ]]; then
