@@ -3,8 +3,11 @@ pipeline {
     stages {
         stage('hello AWS') {
             steps {
-            withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AKIAJZBYAC5M64DQUK7A', credentialsId: 'Default_region', secretKeyVariable: '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']]) {
-            // bat 'echo "hello KB">hello.txt'
+                   
+                
+                withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'default_region', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
+           
+                    // bat 'echo "hello KB">hello.txt'
             // s3Upload acl: 'Private', bucket: 'Relicance_BK', file: 'hello.txt'
             // s3Download bucket: 'Relicance_BK', file: 'downloadedHello.txt', path: 'hello.txt'
             //bat 'cat downloadedHello.txt'
