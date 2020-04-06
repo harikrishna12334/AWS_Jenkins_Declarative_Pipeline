@@ -5,7 +5,7 @@ pipeline {
             steps {
                    
                 
-                withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'default_region', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
+                withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AKey', credentialsId: 'def_region', secretKeyVariable: 'Se_key']]) {
             // bat 'aws s3 mb s3://relicankb --region us-east-1'
                    // bat 'echo "hello KB">hello.txt'
                     // s3Upload acl: 'Private', bucket: 'Relicance_BK', file: 's3file', path: 'D:\\Krishna\\AWS\\jenkins\\workspace\\AWS_Pipeline', text: 'this is s3 file', workingDir: 'AWS_Pipeline'  
